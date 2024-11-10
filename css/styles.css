@@ -1,0 +1,221 @@
+/* Head styling */
+html{height:100%;}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+.skip-link {
+    background: #fff;
+    color: #000;
+    padding: 8px;
+    z-index: 1;
+    font-family: 'Lato', sans-serif;
+    transition: top 0.3s ease, opacity 0.3s ease;  /* Add transition here */
+    opacity: 0;  /* Initially hidden */
+  }
+  
+  .skip-link:focus {
+    opacity: 1;  /* Become fully visible */
+    border: red 10px solid;
+  }
+  
+.navigation {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 在元素之间均匀分配空间 */
+    align-items: center; /* 垂直居中对齐元素 */
+    padding: 20px; /* 为导航栏添加 20 像素的内边距 */
+    background-color: #000; /* 设置导航栏背景颜色为黑色 */
+}
+
+.main-heading {
+    font-size: 2.0rem; /* 设置主标题的字体大小 */
+    color: #fff; /* 将主标题颜色设置为白色 */
+    margin: 0; /* 去除默认的外边距 */
+    position: relative; /* 设置主标题的位置为相对定位，以便后续使用伪元素 */
+    z-index: 2; /* 设置 z-index 确保标题在其他元素之上 */
+}
+/* Background stripe */
+.stripe {
+    position: relative; /* 设置为相对定位，为伪元素提供参照 */
+}
+
+.stripe::after {
+    content: ''; /* 创建一个装饰性线条 */
+    position: absolute; /* 绝对定位 */
+    width: calc(100% + 20px); /* 设置宽度为文本的宽度 */
+    height: 20px; /* 设置线条高度 */
+    bottom: 10px; /* 定位到文本下方 5 像素的位置 */
+    left: -10px; /* 向左移动线条，使其与文本左对齐 */
+    background: #005f99; /* 设置线条的颜色为蓝色 */
+    z-index: -1; /* 让线条位于文本后面 */
+}
+.nav-links {
+    list-style: none; /* 去除列表项的默认符号 */
+    display: flex; /* 使用 Flexbox 布局来排列导航链接 */
+    gap: 20px; /* 为每个链接之间添加 20 像素的间距 */
+    padding: 0; /* 去除默认的内边距 */
+    margin: 0; /* 去除默认的外边距 */
+}
+.nav-button {
+    text-decoration: none; /* 去除链接的下划线 */
+    font-size: 1rem; /* 设置导航按钮的字体大小 */
+    font-family: 'Lato', sans-serif; /* 设置导航按钮的字体族为 Lato */
+    padding: 10px 20px; /* 为按钮内部添加内边距，增加按钮的大小 */
+    color: #fff; /* 将按钮文本颜色设置为白色 */
+    background-color: #005f99; /* 设置默认情况下按钮的背景颜色为蓝色 */
+    border-radius: 30px; /* 使按钮的边角变为圆角 */
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* 为悬停效果设置平滑的过渡效果 */
+}
+.nav-button:focus{
+    border: red 10px solid;
+}
+
+.nav-button:hover {
+    background-color: #0ad3e2; /* 悬停时更改按钮背景颜色为薄荷绿色 */
+    transform: scale(1.5); /* 悬停时放大按钮 */
+    color: #000; /* 悬停时将文本颜色设置为黑色 */
+}
+.nav-container {
+    width: 100%; /* 设置容器的宽度为页面的全部宽度 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 在标题和链接之间均匀分布空间 */
+    align-items: center; /* 垂直居中对齐标题和链接 */
+}
+/* Banner 包含容器的样式开始 */
+.wrapper {
+    width: 90%; /* 设置容器的宽度为页面的 90% */
+    max-width: 1200px; /* 设置容器的最大宽度为 1200 像素 */
+    margin: 50px auto; /* 将容器水平居中，并在顶部添加一些外边距 */
+    border-radius: 50px; /* 将边框设置为圆角 */
+    overflow: hidden; /* 如果内容超过容器边界，则裁剪它 */
+    position: relative; /* 使文本能够定位在图片之上 */
+}
+/* Banner 包含容器的样式结束 */
+
+/* Banner 图片样式开始 */
+.hero-image {
+    width: 100%; /* 使图片宽度与容器一致 */
+    animation: zoom 15s infinite ease-in-out alternate; /* 为图片添加缩放动画 */
+    display: block; /* 设置为块级元素，防止默认的内联图片行为 */
+}
+/* Banner 图片样式结束 */
+
+/* Banner 文本容器样式开始 */
+.text {
+    position: absolute; /* 使文本定位在图片之上 */
+    bottom: 30px; /* 文本距离顶部的位置 */
+    left: 30px; /* 文本距离左侧的位置 */
+    color: #fff; /* 将文本颜色设置为白色 */
+    z-index: 5; /* 使文本位于图片上方 */
+}
+/* Banner 文本容器样式结束 */
+
+.magazine-title {
+    font-size: 1.5rem; /* 设置杂志标题的字体大小 */
+    margin: 0; /* 去除默认的外边距 */
+    font-family: 'Lato', sans-serif; /* 修改字体族为 Lato */
+}
+
+.hero-heading {
+    font-size: 3rem; /* 设置主标题的字体大小 */
+    margin: 10px 0; /* 添加一些外边距以增加文本间距 */
+    font-family: 'Lato', sans-serif; /* 修改字体族为 Lato */
+    background-clip: text; /* 仅应用到文字上 */
+    color:#fff; /* 使背景色可见 */
+    animation: textScroll 10s linear infinite; /* 应用渐变滚动动画 */
+}
+
+.colorShift {
+    background: linear-gradient(90deg, #005f99, #0ad3e2); /* 修改颜色为渐变动画，颜色为 #005f99 和 #0ad3e2 */
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    animation: textScroll 3s infinite alternate;
+}
+@keyframes textScroll {
+    from{
+
+        background-position: 0% 0%;
+    }
+    to {
+    background-position: 100% 0%;
+
+    }
+}
+
+.hero-subheading {
+    font-size: 1.2rem; /* 设置副标题的字体大小 */
+    font-family: 'Lato', sans-serif; /* 修改字体族为 Lato */
+}
+
+.icon {
+    width: 64px; /* 设置图标的宽度为 64 像素 */
+    height: 64px; /* 设置图标的高度为 64 像素 */
+}
+/* Content Style */
+.title {
+    margin: 0; /* 去除默认的外边距 */
+    font-family: 'Lato', sans-serif; /* 修改字体族为 Lato */
+}
+
+.content-button {
+    text-decoration: none; /* 去除链接的下划线 */
+    font-size: 1rem; /* 设置导航按钮的字体大小 */
+    font-family: 'Lato', sans-serif; /* 设置导航按钮的字体族为 Lato */
+    padding: 10px 20px; /* 为按钮内部添加内边距，增加按钮的大小 */
+    color: #fff; /* 将按钮文本颜色设置为白色 */
+    background-color: #670b8b; /* 设置默认情况下按钮的背景颜色为蓝色 */
+    border-radius: 30px; /* 使按钮的边角变为圆角 */
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* 为悬停效果设置平滑的过渡效果 */
+}
+
+.content-button:hover {
+    background-color: #0ad3e2; /* 悬停时更改按钮背景颜色为薄荷绿色 */
+    transform: scale(1.2); /* 悬停时放大按钮 */
+    color: #000; /* 悬停时将文本颜色设置为黑色 */
+}
+
+.content-button:focus{
+    border: red 10px solid;
+}
+.content-container{
+    display:grid;
+    row-gap: 50px;
+    /* flex-wrap: wrap; */
+}
+.planet{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+footer{
+    border-top:#808080 1px solid;
+    position: relative;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Layout for less than 500px width (mobile view) */
+@media (max-width: 500px) {
+    .content-container{
+        grid-template-columns: 1fr;
+    }
+}
+/* Layout for 500px to 900px width (tablet view) */
+@media (min-width: 501px) and (max-width: 900px) {
+    .content-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Layout for above 900px width (desktop view) */
+@media (min-width: 901px) {
+    .content-container{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
