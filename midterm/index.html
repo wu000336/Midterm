@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The System</title>
+    <!-- google.com/fonts Playfair Display requires in the head -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Banner 的缩放动画关键帧 -->
+    <style>
+        /* Zoom Animation Keyframes */
+        /* Banner 缩放动画关键帧代码开始 */
+@keyframes zoom {
+            from {
+                transform: scale(1); /* 初始缩放比例为 100% */
+            }
+/* Banner 缩放动画关键帧代码结束 */
+            to {
+                transform: scale(1.3); /* 最终缩放比例为 130% */
+            }
+        }
+    </style>
+</head>
+<!-- Navigation -->
+<body>
+    <div style="width:100%;text-align: center;position:absolute;top:0;">
+        <a href="#main-nav" class="skip-link">Skip to nav</a>
+        <a href="#main-content" class="skip-link">Skip to content</a>
+    </div>
+    <div style="min-height: 95%;">
+        <nav role="navagation" id="main-nav" class="navigation">
+            <div class="nav-container">
+                <h1 role="heading" class="main-heading">THE <span class="stripe">SYSTEM</span></h1>
+                <ul class="nav-links">
+                    <li><a href="#planets" class="nav-button">Planets</a></li>
+                    <li><a href="#interstellar" class="nav-button">Interstellar</a></li>
+                    <li><a href="#contact" class="nav-button">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Banner 区域的容器，包含背景图片和文本内容 -->
+        <!-- /* Banner 区域代码开始 */ -->
+        <div role="banner" class="wrapper"> <!-- Banner 区域的容器，包含背景图片和文本内容 -->
+            <div class="text">
+                <h2 class="magazine-title">THE SYSTEM MAGAZINE</h2>
+                <h1 class="hero-heading">Welcome to the <span class="colorShift">Solar System</span></h1>
+                <p class="hero-subheading">Take a tour around the coolest stellar system around.</p>
+            </div>
+            <img src="images/milky-way.jpg" alt="Milky Way" class="hero-image"> <!-- 修正了图片路径 -->
+        </div>
+
+        <!-- Content -->
+        <div role="main" id="main-content" class="wrapper" style="padding:10px">
+        <h1 class="title">Meet the Locals</h1>
+        <div class="content-container">
+            <div class="planet">
+                <img src="images/sun.jpg" alt="The Sun" width="200px" />
+                <h2 class="title">The Sun</h2>
+                <a href="https://en.wikipedia.org/wiki/Sun" target="_blank" class="content-button">
+                    Learn More 
+                </a>
+        </div>
+        <div class="planet">
+            <img src="images/mercury.jpg" alt="The Mercury" width="200px" />
+            <h2 class="title">Mercury</h2>
+            <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank" class="content-button">
+                Learn More 
+            </a>
+    </div>
+    <div class="planet">
+        <img src="images/venus.jpg" alt="The Venus" width="200px" />
+        <h2 class="title">Venus</h2>
+        <a href="https://en.wikipedia.org/wiki/Venus" target="_blank" class="content-button">
+            Learn More 
+        </a>
+    </div>
+    <div class="planet">
+        <img src="images/earth.jpg" alt="The Earth" width="200px" />
+        <h2 class="title">The Earth</h2>
+        <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" class="content-button">
+            Learn More 
+        </a>
+    </div>
+    <div class="planet">
+        <img src="images/moon.jpg" alt="The Moon" width="200px" />
+        <h2 class="title">The Moon</h2>
+        <a href="https://en.wikipedia.org/wiki/Moon" target="_blank" class="content-button">
+            Learn More 
+        </a>
+    </div>
+    <div class="planet">
+        <img src="images/mars.jpg" alt="The Mars" width="200px" />
+        <h2 class="title">The Sun</h2>
+        <a href="https://en.wikipedia.org/wiki/Mars" target="_blank" class="content-button">
+            Learn More 
+        </a>
+    </div>
+    </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 - The System</p>
+    </footer>
+</body>
+</html>
